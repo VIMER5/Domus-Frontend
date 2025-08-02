@@ -5,6 +5,9 @@
 
   --dm-c-light-gray: rgb(206, 206, 206, 25%);
 
+  --dm-c-gradiend-c1: #8981fa;
+  --dm-c-gradiend-c2: #d167bf;
+
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
@@ -26,14 +29,8 @@
   --color-text-main: var(--dm-c-gray-blue);
   --color-text-secondary: var(--dm-c-Dark-Charcoal);
 
-  --color-box-shadow-light: var(--dm-c-light-gray);
+  --gradiend-color: linear-gradient(-130.224deg, var(--dm-c-gradiend-c1) 0%, var(--dm-c-gradiend-c2) 100%);
+  --gradiend-text-color: linear-gradient(97deg, var(--dm-c-gradiend-c1) 0%, var(--dm-c-gradiend-c2) 100%);
 
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-  --section-gap: 160px;
+  --color-box-shadow-light: var(--dm-c-light-gray);
 }

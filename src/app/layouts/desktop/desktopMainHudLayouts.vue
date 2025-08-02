@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import headeBar from "@/widgets/headerBar/headeBar.vue";
-import logo from "@/shared/ui/logo.vue";
+import logo from "@/shared/img/logo.vue";
+import NavBar from "@/widgets/navBar/navBar.vue";
 </script>
 <template>
   <div className="hud">
@@ -8,7 +9,7 @@ import logo from "@/shared/ui/logo.vue";
     <header className="header">
       <div className="header__content m50And30"><headeBar /></div>
     </header>
-    <nav className="nav box_shadow-r">nav</nav>
+    <nav className="nav box_shadow-r"><NavBar /></nav>
     <main className="main m50And30"><router-view /></main>
   </div>
 </template>
@@ -17,7 +18,7 @@ import logo from "@/shared/ui/logo.vue";
 .hud {
   height: 100%;
   display: grid;
-  grid-template-columns: clamp(100px, 16.9vw, 300px) 1fr;
+  grid-template-columns: clamp(100px, 16.9vw, 400px) 1fr;
   grid-template-rows: clamp(100px, calc((8.4vw + 8.4vh) / 2), 200px) 1fr;
   grid-template-areas:
     "logo header"
@@ -53,6 +54,7 @@ import logo from "@/shared/ui/logo.vue";
   flex-direction: column;
 }
 .nav {
+  padding-top: 20px;
   grid-area: nav;
 }
 .main {

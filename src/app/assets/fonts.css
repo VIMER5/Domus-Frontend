@@ -7,3 +7,7 @@
   font-family: "interBold";
   src: url("/fonts/interBold.otf");
 }
+@font-face {
+  font-family: "interSemiBold";
+  src: url("/fonts/interSemiBold.otf");
+}
