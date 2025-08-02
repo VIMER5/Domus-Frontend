@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 const route = useRoute();
-import { onMounted } from "vue";
-import time from "@/features/time/time";
+import time from "@/widgets/headerBar/logic/time/time";
 let t = time(5);
 // onMounted(() => {
 //   getDate();
@@ -12,7 +11,7 @@ let t = time(5);
 <template>
   <ul className="header-ul">
     <li className="header__pageTitle">{{ route.meta.title }}</li>
-    <li className="header__time">{{ t.Hours }}:{{ t.Minutes }}</li>
+    <li className="header__time">{{ t.Hours }}:{{ t.Minutes <= 9 ? `0${t.Minutes}` : t.Minutes }}</li>
     <li class="header__profel">Компонент профиля</li>
   </ul>
 </template>

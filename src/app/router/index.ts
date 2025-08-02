@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import cleanLayouts from "../layouts/cleanLayouts.vue";
-import mainHudLayouts from "../layouts/desktop/desktopMainHudLayouts.vue";
-import mobileMainHudLayouts from "../layouts/mobile/mobileMainHudLayouts.vue";
+import cleanLayouts from "@/app/layouts/cleanLayouts.vue";
+import mainHudLayouts from "@/app/layouts/desktop/desktopMainHudLayouts.vue";
+import mobileMainHudLayouts from "@/app/layouts/mobile/mobileMainHudLayouts.vue";
 
 const mobilePrefix = "/m";
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import headeBar from "@/widgets/headerBar/headeBar.vue";
+import headeBar from "@/widgets/headerBar/ui/headeBar.vue";
 import logo from "@/shared/img/logo.vue";
-import NavBar from "@/widgets/navBar/navBar.vue";
+import NavBar from "@/widgets/navBar/ui/navBar.vue";
 </script>
 <template>
   <div className="hud">
