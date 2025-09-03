@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import checkScreen from "@/shared/lib/device";
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import axiosq from "./axios";
 checkScreen();
+axiosq.post("/loger").then((res) => {});
 </script>
 
 <template>
-  <!-- <RouterLink to="/">Home</RouterLink>
-  <RouterLink to="/about">About</RouterLink> -->
   <RouterView />
 </template>
 

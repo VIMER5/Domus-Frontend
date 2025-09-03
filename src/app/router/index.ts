@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import cleanLayouts from "@/app/layouts/cleanLayouts.vue";
 import mainHudLayouts from "@/app/layouts/desktop/desktopMainHudLayouts.vue";
 import mobileMainHudLayouts from "@/app/layouts/mobile/mobileMainHudLayouts.vue";
+import { authUserStore } from "../stores/user.js";
 
 const mobilePrefix = "/m";
 
@@ -12,6 +13,7 @@ const router = createRouter({
       path: "/",
       name: "desktop",
       component: mainHudLayouts,
+      meta: { requiresAuth: true },
       children: [
         { path: "", name: "main", meta: { title: "Главаная" }, component: () => import("@/pages/main/index.vue") },
         { path: "/f", meta: { title: "хз" }, component: () => import("@/pages/HomeView.vue") },
@@ -20,6 +22,7 @@ const router = createRouter({
     },
     {
       path: `${mobilePrefix}`,
+      meta: { requiresAuth: true },
       component: mobileMainHudLayouts,
       children: [{ path: ":NotFoundUrl(.*)", component: () => import("@/pages/NotFaund/index.vue") }],
     },
@@ -35,6 +38,10 @@ const router = createRouter({
   ],
 });
 router.beforeEach((to, from, next) => {
+  const authUser = authUserStore();
+  if (to.meta.requiresAuth && !authUser.isAuthenticated) {
+  }
+
   const isMobile = window.innerWidth <= 768;
   const isMobileRoute = to.fullPath.startsWith(mobilePrefix);
   if (isMobileRoute && !isMobile) next(to.fullPath.replace(mobilePrefix, ""));
