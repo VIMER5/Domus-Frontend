@@ -3,9 +3,6 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 import time from "@/widgets/headerBar/logic/time/time";
 let t = time(5);
-// onMounted(() => {
-//   getDate();
-// });
 </script>
 
 <template>
@@ -37,9 +34,6 @@ let t = time(5);
   font-size: 20px;
   font-size: clamp(19px, 2.245cqw, 25px);
 }
-/* .header__profel {
-} */
-
 @media (min-width: 2000px) {
   .header__pageTitle {
     font-size: clamp(20px, 2.10714286cqw, 60px);

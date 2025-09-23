@@ -1,14 +1,27 @@
 import { defineStore } from "pinia";
+import $api from "../axios";
+import type { Axios, AxiosResponse } from "axios";
 
 interface authUserStore {
-  accessToken: string | null;
+  AaccessToken: null | string;
 }
 
 export const authUserStore = defineStore("authUser", {
   state: (): authUserStore => ({
-    accessToken: null,
+    AaccessToken: sessionStorage.getItem("accessToken") || null,
   }),
   getters: {
-    isAuthenticated: (s) => !!s.accessToken,
+    isAaccessToken: (s) => !!s.AaccessToken,
+  },
+  actions: {
+    async updatToken(): Promise<any> {
+      try {
+        const res = await $api.get("/auth/updatAccessToken");
+        sessionStorage.setItem("accessToken", res.data.accessToken);
+        this.AaccessToken = res.data.accessToken;
+      } catch (err) {
+        this.AaccessToken = null;
+      }
+    },
   },
 });

@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import cleanLayouts from "@/app/layouts/cleanLayouts.vue";
 import mainHudLayouts from "@/app/layouts/desktop/desktopMainHudLayouts.vue";
 import mobileMainHudLayouts from "@/app/layouts/mobile/mobileMainHudLayouts.vue";
-import { authUserStore } from "../stores/user.js";
-
+import { guard } from "./guard/guard.controller";
 const mobilePrefix = "/m";
 
 const router = createRouter({
@@ -37,15 +36,7 @@ const router = createRouter({
     },
   ],
 });
-router.beforeEach((to, from, next) => {
-  const authUser = authUserStore();
-  if (to.meta.requiresAuth && !authUser.isAuthenticated) {
-  }
 
-  const isMobile = window.innerWidth <= 768;
-  const isMobileRoute = to.fullPath.startsWith(mobilePrefix);
-  if (isMobileRoute && !isMobile) next(to.fullPath.replace(mobilePrefix, ""));
-  else if (!isMobileRoute && isMobile) next(mobilePrefix + to.fullPath);
-  else next();
-});
+guard(router, mobilePrefix);
+
 export default router;

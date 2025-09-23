@@ -7,6 +7,7 @@ export default () => {
   const route = useRoute();
 
   function checkScreen() {
+    if (route.fullPath == "/loginIn") return;
     const isMobile = window.innerWidth <= 768;
     const isMobileRoute = route.fullPath.startsWith(mobilePrefix);
 
