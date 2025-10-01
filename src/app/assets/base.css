@@ -4,25 +4,13 @@
   --dm-c-Dark-Charcoal: #1f1f1f;
 
   --dm-c-light-gray: rgb(206, 206, 206, 25%);
+  --dm-c-gray-45: rgb(90, 107, 122, 45%);
+  --dm-c-b-Dark-Charcoal-60: rgb(31, 31, 31, 60%);
 
   --dm-c-gradiend-c1: #8981fa;
   --dm-c-gradiend-c2: #d167bf;
-
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
-  --vt-c-indigo: #2c3e50;
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --dm-c-while: #f3f4f8;
+  --dm-c-red: #d70000;
 }
 
 :root {
@@ -33,4 +21,15 @@
   --gradiend-text-color: linear-gradient(97deg, var(--dm-c-gradiend-c1) 0%, var(--dm-c-gradiend-c2) 100%);
 
   --color-box-shadow-light: var(--dm-c-light-gray);
+
+  --color-text-button-noActive: var(--dm-c-while);
+  --bcColor-button-noActive: var(--dm-c-gray-45);
+  --bccolor-button-noActive-hover: rgba(90, 107, 122, 0.877);
+
+  --color-input-borderAndPlaceholder: var(--dm-c-gray-45);
+  --color-input-text: var(--dm-c-b-Dark-Charcoal-60);
+
+  --color-loginIn-text: var(--dm-c-gray-45);
+
+  --error-color: var(--dm-c-red);
 }

@@ -30,7 +30,7 @@ const router = createRouter({
       name: "loginIn",
       component: cleanLayouts,
       children: [
-        { path: "", name: "loginInCom", component: () => import("@/pages/AboutView.vue") },
+        { path: "", name: "loginInCom", component: () => import("@/pages/loginIn/loginIn.vue") },
         { path: ":NotFoundUrl(.*)*", component: () => import("@/pages/NotFaund/index.vue") },
       ],
     },

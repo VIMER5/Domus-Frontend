@@ -5,11 +5,7 @@ function guard(router: Router, mobilePrefix: string) {
   router.beforeEach(async (to, from, next) => {
     const authUser = authUserStore();
     if (!authUser.isAaccessToken) {
-      try {
-        await authUser.updatToken();
-      } catch (err) {
-        console.log(err);
-      }
+      await authUser.updatToken();
     }
 
     if (to.meta.requiresAuth && !authUser.isAaccessToken) {

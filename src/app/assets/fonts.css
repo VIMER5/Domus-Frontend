@@ -11,3 +11,7 @@
   font-family: "interSemiBold";
   src: url("/fonts/interSemiBold.otf");
 }
+@font-face {
+  font-family: "interRegular";
+  src: url("/fonts/interRegular.otf");
+}

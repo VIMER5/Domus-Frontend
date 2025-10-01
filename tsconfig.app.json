@@ -7,7 +7,8 @@
 
     "paths": {
       "@/*": ["./src/*"],
-      "@Store/*": ["./src/app/stores/*"]
+      "@Store/*": ["./src/app/stores/*"],
+      "@sharedUi/*": ["./src/shared/ui/*"]
     }
   }
 }

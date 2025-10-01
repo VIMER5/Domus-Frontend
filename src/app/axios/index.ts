@@ -15,6 +15,7 @@ $api.interceptors.request.use((conf) => {
   conf.headers.auth = sessionStorage.getItem("accessToken");
   return conf;
 });
+
 $api.interceptors.response.use(
   (res: AxiosResponse) => res,
   async (error) => {
@@ -43,6 +44,7 @@ async function updatToken(): Promise<any> {
     sessionStorage.setItem("accessToken", res.data.accessToken);
     return res;
   } catch (err) {
+    sessionStorage.removeItem("accessToken");
     throw err;
   }
 }
