@@ -5,7 +5,7 @@ import NavBar from "@/widgets/navBar/ui/navBar.vue";
 </script>
 <template>
   <div className="hud">
-    <div className="logo box_shadow-r"><logo class="logo-svg" /></div>
+    <div className="logo box_shadow-r"></div>
     <header className="header">
       <div className="header__content m50And30"><headeBar /></div>
     </header>
@@ -18,8 +18,8 @@ import NavBar from "@/widgets/navBar/ui/navBar.vue";
 .hud {
   height: 100%;
   display: grid;
-  grid-template-columns: clamp(100px, 16.9vw, 400px) 1fr;
-  grid-template-rows: clamp(100px, calc((8.4vw + 8.4vh) / 2), 200px) 1fr;
+  grid-template-columns: clamp(80px, 6.86vw, 400px) 1fr;
+  grid-template-rows: clamp(66px, calc((8.4vw + 8.4vh) / 2), 100px) 1fr;
   grid-template-areas:
     "logo header"
     "nav main";

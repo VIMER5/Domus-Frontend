@@ -17,7 +17,7 @@ function loginPages() {
       });
       if (res.status == 200) {
         sessionStorage.setItem("accessToken", res.data.accessToken);
-        // window.location.reload();
+        window.location.href = "/";
       }
     } catch (err) {
       errorText.value = "Неверный логин или пароль";

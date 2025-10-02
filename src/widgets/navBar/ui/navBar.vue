@@ -40,8 +40,8 @@ let navRout = shallowRef<navRout[]>([
   <ul className="navBar-ul">
     <li v-for="item in navRout">
       <RouterLink className="RouterLink" v-slot="{ isExactActive }" :to="item.rout">
-        <div :class="['navBar__content', { 'navBar__content-activ': isExactActive }]" :data-text="item.title">
-          <component :is="item.img" :active="isExactActive ? true : false" class="navBar-svg" /> {{ item.title }}
+        <div :class="['navBar__content', { 'navBar__content-activ': isExactActive }]">
+          <component :is="item.img" :active="isExactActive ? true : false" class="navBar-svg" />
         </div>
       </RouterLink>
     </li>
@@ -63,9 +63,9 @@ let navRout = shallowRef<navRout[]>([
   height: max-content;
 }
 .navBar-svg {
-  width: 16.5cqw;
+  width: 41.25cqw;
   height: auto;
-  margin-left: calc(3.5cqw + 17px);
+  margin-left: calc(8.75cqw + 17px);
 }
 
 .navBar__content {
@@ -79,25 +79,8 @@ let navRout = shallowRef<navRout[]>([
   transition: color 1s ease;
 }
 
-.navBar__content::after {
-  content: attr(data-text);
-  position: absolute;
-  right: 0;
-  background: var(--gradiend-text-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
 .navBar__content-activ {
   color: transparent;
-}
-
-.navBar__content-activ::after {
-  opacity: 1;
 }
 
 .navBar__content::before {
@@ -105,7 +88,7 @@ let navRout = shallowRef<navRout[]>([
   background: var(--gradiend-color);
   position: absolute;
   height: 100%;
-  width: 3.5cqw;
+  width: 8.75cqw;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 
