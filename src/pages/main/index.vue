@@ -1,9 +1,5 @@
-<template>
-  main
-  <button @click="t">сенд</button>
-</template>
-
 <script setup lang="ts">
+import widgetsBord from "@/widgets/widgetsBord/ui/widgetsBord.vue";
 import $api from "@/app/axios";
 
 function t() {
@@ -17,3 +13,12 @@ function t() {
     });
 }
 </script>
+
+<template>
+  <div class="mainPages">
+    <widgetsBord />
+  </div>
+  <button @click="t">сенд</button>
+</template>
+
+<style scoped></style>

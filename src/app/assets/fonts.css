@@ -15,3 +15,8 @@
   font-family: "interRegular";
   src: url("/fonts/interRegular.otf");
 }
+
+@font-face {
+  font-family: "InterLight";
+  src: url("/fonts/InterLight.otf");
+}

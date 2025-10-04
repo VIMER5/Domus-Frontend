@@ -15,7 +15,6 @@ const router = createRouter({
       meta: { requiresAuth: true },
       children: [
         { path: "", name: "main", meta: { title: "Главаная" }, component: () => import("@/pages/main/index.vue") },
-        { path: "/f", meta: { title: "хз" }, component: () => import("@/pages/HomeView.vue") },
         { path: ":NotFoundUrl(.*)", meta: { title: "404" }, component: () => import("@/pages/NotFaund/index.vue") },
       ],
     },

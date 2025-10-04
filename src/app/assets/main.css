@@ -9,6 +9,7 @@ body {
   background-color: #f3f4f8;
   height: 100dvh;
   color: var(--color-text-main);
+  box-sizing: border-box;
   font-family: "interMedium";
 }
 

@@ -11,6 +11,7 @@
   --dm-c-gradiend-c2: #d167bf;
   --dm-c-while: #f3f4f8;
   --dm-c-red: #d70000;
+  --dm-c-while-full: #ffffff;
 }
 
 :root {
@@ -32,4 +33,7 @@
   --color-loginIn-text: var(--dm-c-gray-45);
 
   --error-color: var(--dm-c-red);
+  /* panel-widgets */
+  --BC-c-panel-widgets: var(--dm-c-while-full);
+  --box-shadow-panel: 0px 0px 3px 2px var(--dm-c-light-gray);
 }
