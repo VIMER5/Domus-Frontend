@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import panelWidgets from "@/components/panelWidgets.vue";
-import secuirityMod from "@/widgets/secuirityMod.vue";
-import weatherWidgets from "@/widgets/weatherWidgets.vue";
+import secuirityMod from "@/widgets/widgetsBord/ui/secuirityMod.vue";
+import weatherWidgets from "@/widgets/widgetsBord/ui/weatherWidgets.vue";
 </script>
 
 <template>
   <div class="widgets__bord">
-    <component :is="panelWidgets">DAWDAWD</component>
+    <!-- <component :is="panelWidgets">DAWDAWD</component> -->
     <component :is="panelWidgets"><secuirityMod /></component>
     <component :is="panelWidgets"><weatherWidgets /></component>
   </div>

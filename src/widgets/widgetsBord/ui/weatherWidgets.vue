@@ -4,7 +4,10 @@ import lightSnow from "@/shared/img/precipitation/lightSnow.vue";
 
 <template>
   <div class="weather__Widgets">
-    <div class="date gradiend">22 <span>Четверг</span></div>
+    <div class="date gradiend">
+      <div class="day">22</div>
+      <div class="day__week">Четверг</div>
+    </div>
 
     <div class="weather">
       <div class="city">Оренбург</div>
@@ -12,7 +15,7 @@ import lightSnow from "@/shared/img/precipitation/lightSnow.vue";
         <div class="tem gradiend">-29°</div>
         <div class="precipitation">
           <div class="icon"><lightSnow /></div>
-          <div class="precipitation__test gradiend">Дождь</div>
+          <div class="precipitation__text gradiend">Дождь</div>
         </div>
       </div>
     </div>
@@ -26,50 +29,60 @@ import lightSnow from "@/shared/img/precipitation/lightSnow.vue";
   -webkit-text-fill-color: transparent;
 }
 .weather__Widgets {
+  font-size: clamp(0.5rem, 0.6dvw, 1.2rem);
   font-family: "interRegular";
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 4em;
 }
 .date {
   width: max-content;
   display: flex;
   flex-direction: column;
-  font-size: 6.4rem;
-  gap: 1.2rem;
-
-  > span {
-    font-size: 2rem;
-    -webkit-text-fill-color: var(--color-text-secondary);
-  }
+  gap: 1.2em;
 }
+.day {
+  font-size: 6.4em;
+}
+.day__week {
+  font-size: 2em;
+  -webkit-text-fill-color: var(--color-text-secondary);
+}
+
 .weather {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.8em;
 }
 .city {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .content__weather {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 1em;
   align-items: center;
 }
 .tem {
-  font-size: 4rem;
+  font-size: 4em;
 }
 .precipitation {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
+  gap: 0.3em;
 }
-.precipitation__test {
+.icon {
+  font-size: 3.4em;
+  > svg {
+    height: auto;
+    width: 1em;
+  }
+}
+.precipitation__text {
   font-family: "InterLight";
-  font-size: 1.3rem;
+  font-size: 1.3em;
 }
 </style>

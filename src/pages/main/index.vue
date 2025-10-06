@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import widgetsBord from "@/widgets/widgetsBord/ui/widgetsBord.vue";
+import roomBord from "@/widgets/widgetsBord/ui/roomBord.vue";
 import $api from "@/app/axios";
 
 function t() {
@@ -17,6 +18,7 @@ function t() {
 <template>
   <div class="mainPages">
     <widgetsBord />
+    <roomBord />
   </div>
   <button @click="t">сенд</button>
 </template>

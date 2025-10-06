@@ -6,7 +6,7 @@
 
 <style scoped>
 .widget__panel {
-  padding: 3rem 3rem;
+  padding: clamp(1.9rem, 2dvw, 3rem);
   background-color: var(--BC-c-panel-widgets);
   border-radius: 1.8rem;
   box-shadow: var(--box-shadow-panel);
