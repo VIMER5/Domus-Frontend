@@ -13,8 +13,8 @@ import NavBar from "@/widgets/navBar/ui/navBar.vue";
 .hud {
   height: 100%;
   display: grid;
-  grid-template-columns: clamp(80px, 6.86vw, 400px) 1fr;
-  grid-template-rows: clamp(66px, calc((8.4vw + 8.4vh) / 2), 100px) 1fr;
+  grid-template-columns: clamp(80px, 6vw, 350px) 1fr;
+  grid-template-rows: clamp(66px, calc((8.4vw + 8.4vh) / 2), 75px) 1fr;
   grid-template-areas:
     "stub stub2"
     "nav main";

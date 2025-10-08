@@ -7,8 +7,10 @@ import weatherWidgets from "@/widgets/widgetsBord/ui/weatherWidgets.vue";
 <template>
   <div class="widgets__bord">
     <!-- <component :is="panelWidgets">DAWDAWD</component> -->
+    <RouterLink to="/weather">
+      <component :is="panelWidgets"><weatherWidgets /></component>
+    </RouterLink>
     <component :is="panelWidgets"><secuirityMod /></component>
-    <component :is="panelWidgets"><weatherWidgets /></component>
   </div>
 </template>
 

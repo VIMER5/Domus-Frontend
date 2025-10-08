@@ -55,6 +55,7 @@ import lightSnow from "@/shared/img/precipitation/lightSnow.vue";
   gap: 0.8em;
 }
 .city {
+  color: var(--color-text-main);
   font-size: 2em;
 }
 

@@ -20,7 +20,13 @@ function t() {
     <widgetsBord />
     <roomBord />
   </div>
-  <button @click="t">сенд</button>
 </template>
 
-<style scoped></style>
+<style scoped>
+.mainPages {
+  font-size: clamp(0.5rem, 0.6dvw, 1.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+}
+</style>

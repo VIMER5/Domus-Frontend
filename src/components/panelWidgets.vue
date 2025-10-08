@@ -10,5 +10,12 @@
   background-color: var(--BC-c-panel-widgets);
   border-radius: 1.8rem;
   box-shadow: var(--box-shadow-panel);
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: top 0.3s;
+}
+.widget__panel:hover {
+  top: -10px;
 }
 </style>

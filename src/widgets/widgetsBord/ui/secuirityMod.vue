@@ -18,6 +18,7 @@ import secuirityMod from "@/shared/img/secuirityMod.vue";
   align-items: center;
   justify-content: center;
   gap: 1.4em;
+  width: 15em;
 }
 span {
   font-size: 2em;
