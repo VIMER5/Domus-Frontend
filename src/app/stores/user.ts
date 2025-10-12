@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import $api from "../axios";
+import $api from "../API";
 import type { Axios, AxiosResponse } from "axios";
 
 interface authUserStore {

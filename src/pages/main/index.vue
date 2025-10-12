@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import widgetsBord from "@/widgets/widgetsBord/ui/widgetsBord.vue";
 import roomBord from "@/widgets/widgetsBord/ui/roomBord.vue";
-import $api from "@/app/axios";
+import $api from "@/app/API";
 
 function t() {
   $api

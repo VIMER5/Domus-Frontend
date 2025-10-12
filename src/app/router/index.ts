@@ -15,6 +15,27 @@ const router = createRouter({
       meta: { requiresAuth: true },
       children: [
         { path: "", name: "main", meta: { title: "Главаная" }, component: () => import("@/pages/main/index.vue") },
+        {
+          path: "/addDevice",
+          name: "addDevice",
+          meta: { title: "add Device" },
+          component: () => import("@/pages/addDevice/addDevice.vue"),
+          children: [
+            {
+              path: "",
+              name: "addDeviced",
+              meta: { title: "add Deviced" },
+              component: () => import("@/pages/addDevice/insex.vue"),
+            },
+            {
+              path: "room",
+              name: "addDevicedd",
+              meta: { title: "add Devicedu" },
+              component: () => import("@/pages/addDevice/insex.vue"),
+            },
+          ],
+        },
+
         { path: ":NotFoundUrl(.*)", meta: { title: "404" }, component: () => import("@/pages/NotFaund/index.vue") },
       ],
     },

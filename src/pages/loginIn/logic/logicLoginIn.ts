@@ -1,5 +1,5 @@
 import { ref } from "vue";
-import $api from "@/app/axios";
+import $api from "@/app/API";
 function loginPages() {
   const login = ref<string>("");
   const pass = ref<string>("");
