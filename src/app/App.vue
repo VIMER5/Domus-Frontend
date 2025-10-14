@@ -8,6 +8,9 @@ socket.emit("join_room", 1);
 socket.on("room_state", (data) => {
   ff.value = data;
 });
+socket.on("weather", (daf) => {
+  console.log(daf);
+});
 const ff = ref();
 checkScreen();
 </script>
