@@ -9,7 +9,11 @@ socket.on("room_state", (data) => {
   ff.value = data;
 });
 socket.on("weather", (daf) => {
-  console.log(daf);
+  // console.log(daf);
+});
+
+socket.on("weatherCurrent", (data) => {
+  console.log(data);
 });
 const ff = ref();
 checkScreen();
