@@ -1,21 +1,28 @@
 <script setup lang="ts">
 import lightSnow from "@/shared/img/precipitation/lightSnow.vue";
+import { weatherStore } from "@/app/stores/weather";
+import dateService from "@/app/service/dateService";
+const store = weatherStore();
 </script>
 
 <template>
   <div class="weather__Widgets">
     <div class="date gradiend">
-      <div class="day">22</div>
-      <div class="day__week">Четверг</div>
+      <div class="day">{{ dateService.date.getDate() }}</div>
+      <div class="day__week">{{ dateService.DayInString }}</div>
     </div>
 
     <div class="weather">
-      <div class="city">Оренбург</div>
+      <div class="city">{{ store.currentWeather ? store.currentWeather.location.name : "--" }}</div>
       <div class="content__weather">
-        <div class="tem gradiend">-29°</div>
+        <div class="tem gradiend">
+          {{ store.currentWeather ? Math.round(store.currentWeather.current.temp_c) : "--" }}°
+        </div>
         <div class="precipitation">
           <div class="icon"><lightSnow /></div>
-          <div class="precipitation__text gradiend">Дождь</div>
+          <div class="precipitation__text gradiend">
+            {{ store.currentWeather ? store.currentWeather.current.condition.text : "--" }}
+          </div>
         </div>
       </div>
     </div>
@@ -66,7 +73,7 @@ import lightSnow from "@/shared/img/precipitation/lightSnow.vue";
   align-items: center;
 }
 .tem {
-  font-size: 4em;
+  font-size: 6em;
 }
 .precipitation {
   display: flex;
@@ -85,5 +92,7 @@ import lightSnow from "@/shared/img/precipitation/lightSnow.vue";
 .precipitation__text {
   font-family: "InterLight";
   font-size: 1.3em;
+  max-width: 7em;
+  text-align: center;
 }
 </style>
