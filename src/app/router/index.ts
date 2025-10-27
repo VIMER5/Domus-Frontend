@@ -20,20 +20,20 @@ const router = createRouter({
           name: "addDevice",
           meta: { title: "add Device" },
           component: () => import("@/pages/addDevice/addDevice.vue"),
-          children: [
-            {
-              path: "",
-              name: "addDeviced",
-              meta: { title: "add Deviced" },
-              component: () => import("@/pages/addDevice/insex.vue"),
-            },
-            {
-              path: "room",
-              name: "addDevicedd",
-              meta: { title: "add Devicedu" },
-              component: () => import("@/pages/addDevice/insex.vue"),
-            },
-          ],
+          // children: [
+          //   {
+          //     path: "",
+          //     name: "addDeviced",
+          //     meta: { title: "add Deviced" },
+          //     component: () => import("@/pages/addDevice/index.vue"),
+          //   },
+          //   {
+          //     path: "room",
+          //     name: "addDevicedd",
+          //     meta: { title: "add Devicedu" },
+          //     component: () => import("@/pages/addDevice/index.vue"),
+          //   },
+          // ],
         },
 
         { path: ":NotFoundUrl(.*)", meta: { title: "404" }, component: () => import("@/pages/NotFaund/index.vue") },
