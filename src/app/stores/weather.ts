@@ -7,7 +7,7 @@ export const weatherStore = defineStore("weatherStore", () => {
   const currentWeather = ref<any>(null);
   socket.on("weatherCurrent", (data) => {
     currentWeather.value = data;
-    console.log(data);
+    // console.log(data);
   });
   return { currentWeather };
 });
